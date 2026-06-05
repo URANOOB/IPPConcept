@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+dist/
+build/
+*.log
+_tmp_*
+.env*
+!.env.example

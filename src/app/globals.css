@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "LazyDog";
+  src: url("/fonts/LazyDog.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "ITC Motter Corpus";
+  src: url("/fonts/Motter Corpus ITC.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "White Shadows";
+  src: url("/fonts/White Shadows.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+:root {
+  color-scheme: light;
+  --ipp-pink: #fbb4bc;
+  --ipp-light-green: #eefabc;
+  --ipp-blue: #97d0f3;
+  --ipp-beige: #efe2d9;
+  --ipp-sky: #a8c8d8;
+  --ipp-water: #90c0c0;
+  --ipp-green: #78a878;
+  --ipp-olive: #90a878;
+  --ipp-cream: #fff0c0;
+  --ipp-paper: #fff8e8;
+  --ipp-coral: #c06048;
+  --ipp-plum: #603048;
+  --ipp-earth: #906030;
+  --ipp-yellow: #ffc84a;
+  --ipp-mint: #dcebcf;
+  --ipp-white: #ffffff;
+  --ipp-black: #000000;
+  --ipp-ink: #603048;
+  --ipp-text: #603048;
+  --ipp-muted: #604452;
+  --ipp-line: rgba(96, 48, 72, 0.22);
+  --ipp-shadow: rgba(96, 48, 72, 0.16);
+  --ipp-hand-shadow: #b56a30;
+  --ipp-hand-light: #f4bd81;
+  --ipp-hand-mid: #f4b071;
+  --ipp-hand-dark: #bd743c;
+  --font-display: "LazyDog", "Comic Sans MS", "Trebuchet MS", sans-serif;
+  --font-brush: "White Shadows", "Segoe Print", "Comic Sans MS", cursive;
+  --font-solid: "ITC Motter Corpus", "Cooper Black", Georgia, serif;
+  --font-body: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--ipp-white);
+  color: var(--ipp-text);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-brush {
+  font-family: var(--font-brush);
+}
+
+.font-solid {
+  font-family: var(--font-solid);
+}
+
+.torn-header {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 95.4%,
+    94% 96.2%,
+    88% 95.5%,
+    80% 96.4%,
+    73% 95.6%,
+    66% 96.6%,
+    59% 95.8%,
+    52% 96.8%,
+    45% 95.9%,
+    38% 96.5%,
+    31% 95.6%,
+    24% 96.3%,
+    17% 95.5%,
+    11% 96.1%,
+    5% 95.6%,
+    0 96.2%
+  );
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--ipp-light-green);
+  color: var(--ipp-text);
+}
