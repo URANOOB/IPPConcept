@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { MotionHero } from "@/components/motion-hero";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Ingles Pa' La Paz | Identidad visual",
+  title: "Ingles Pa' La Paz",
   description:
-    "Landing page de identidad visual para Ingles Pa' La Paz con logo, paleta, tipografias y tecnologias del proyecto.",
+    "Pagina principal de Ingles Pa' La Paz, un proyecto para aprender ingles desde la calma, la identidad y la comunidad.",
 };
 
-export default function Home() {
-  return <MotionHero />;
+export default function HomePage() {
+  redirect("/landing");
 }
