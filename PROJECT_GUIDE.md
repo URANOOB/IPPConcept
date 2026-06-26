@@ -25,7 +25,12 @@ pnpm start
 - Entrada principal de la app: `src/app/page.tsx`
 - Layout global y metadata: `src/app/layout.tsx`
 - Estilos globales, variables CSS, paleta y fuentes: `src/app/globals.css`
-- Componente visual inicial: `src/components/motion-hero.tsx`
+- Pantallas por feature: `src/features/`
+- Pagina de estilos visuales: `src/features/estilos/`
+- Pagina landing principal: `src/features/landing/`
+- Componentes compartidos: `src/shared/components/`
+- Configuracion compartida: `src/shared/config/site.ts`
+- Componente visual de estilos: `src/features/estilos/components/motion-hero.tsx`
 - Assets publicos futuros: `public/`
 
 ## Ruta CSS Base
@@ -80,7 +85,7 @@ La identidad visual usa estas familias:
 | Uso | Fuente | Variable CSS |
 | --- | --- | --- |
 | Titulos expresivos | LazyDog | `--font-display` |
-| Estilo brush/manual | White Shadow Reg | `--font-brush` |
+| Estilo brush/manual | Segoe Print / fallback manual | `--font-brush` |
 | Titulos solidos / marca | ITC Motter Corpus | `--font-solid` |
 | Texto base | Arial / Helvetica | `--font-body` |
 

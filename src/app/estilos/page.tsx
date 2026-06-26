@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Footer from "@/components/footer";
-import { MotionHero } from "@/components/estilos/motion-hero";
+import { EstilosPageContent } from "@/features/estilos/estilos-page";
 
 export const metadata: Metadata = {
   title: "Estilos | Ingles Pa' La Paz",
@@ -9,10 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function EstilosPage() {
-  return (
-    <>
-      <MotionHero />
-      <Footer />
-    </>
-  );
+  return <EstilosPageContent />;
 }

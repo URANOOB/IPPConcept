@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Footer from "@/components/footer";
-import { LandingHero } from "@/components/landing/landing-hero";
+import { LandingPageContent } from "@/features/landing/landing-page";
 
 export const metadata: Metadata = {
   title: "Landing | Ingles Pa' La Paz",
@@ -9,10 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function LandingPage() {
-  return (
-    <>
-      <LandingHero />
-      <Footer />
-    </>
-  );
+  return <LandingPageContent />;
 }

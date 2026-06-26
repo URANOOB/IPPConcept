@@ -53,7 +53,7 @@
   --ipp-hand-mid: #f4b071;
   --ipp-hand-dark: #bd743c;
   --font-display: "LazyDog", "Comic Sans MS", "Trebuchet MS", sans-serif;
-  --font-brush: "White Shadows", "Segoe Print", "Comic Sans MS", cursive;
+  --font-brush: "Segoe Print", "Comic Sans MS", cursive;
   --font-solid: "ITC Motter Corpus", "Cooper Black", Georgia, serif;
   --font-body: Arial, Helvetica, sans-serif;
 }
@@ -118,6 +118,316 @@ body {
   background-position:
     top left,
     0 0;
+}
+
+.ipp-hero-shell {
+  background-image:
+    radial-gradient(circle at 78% 75%, rgba(151, 208, 243, 0.34), transparent 18rem),
+    radial-gradient(circle at 18% 18%, rgba(251, 180, 188, 0.32), transparent 21rem),
+    linear-gradient(90deg, transparent 0, transparent min(5vw, 4.25rem), rgba(251, 180, 188, 0.22) min(5vw, 4.25rem), rgba(251, 180, 188, 0.22) calc(min(5vw, 4.25rem) + 1px), transparent calc(min(5vw, 4.25rem) + 1px)),
+    repeating-linear-gradient(0deg, transparent 0, transparent 2.05rem, rgba(151, 208, 243, 0.18) 2.05rem, rgba(151, 208, 243, 0.18) calc(2.05rem + 1px));
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 2.2rem;
+}
+
+.ipp-torn-paper::before,
+.ipp-torn-paper-top::before,
+.ipp-final-rip::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -7.25rem;
+  height: 9.5rem;
+  background: inherit;
+  z-index: 0;
+  clip-path: polygon(
+    0 45%,
+    1.5% 48%,
+    3.5% 55%,
+    5.2% 50%,
+    7.5% 58%,
+    9.2% 54%,
+    11.6% 61%,
+    14% 57%,
+    16.4% 63%,
+    18.8% 56%,
+    21.3% 51%,
+    24% 48%,
+    26.4% 46%,
+    29% 43%,
+    31.8% 47%,
+    34.5% 44%,
+    37.2% 49%,
+    40.2% 52%,
+    43% 55%,
+    45.8% 52%,
+    48.3% 58%,
+    50.8% 56%,
+    53.2% 60%,
+    56.3% 58%,
+    59% 63%,
+    61.6% 66%,
+    64.4% 69%,
+    67.5% 66%,
+    70.2% 61%,
+    72.8% 55%,
+    75.5% 51%,
+    78.4% 48%,
+    81.2% 45%,
+    84% 50%,
+    86.2% 58%,
+    88.4% 65%,
+    90.8% 61%,
+    93.2% 68%,
+    95.5% 63%,
+    97.8% 66%,
+    100% 62%,
+    100% 100%,
+    0 100%
+  );
+}
+
+.ipp-torn-paper::after,
+.ipp-torn-paper-top::after,
+.ipp-final-rip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -6.85rem;
+  height: 8.4rem;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    radial-gradient(circle at 3% 46%, rgba(96, 48, 72, 0.1) 0 0.08rem, transparent 0.1rem),
+    radial-gradient(circle at 9% 55%, rgba(96, 48, 72, 0.09) 0 0.12rem, transparent 0.13rem),
+    radial-gradient(circle at 18% 58%, rgba(96, 48, 72, 0.08) 0 0.1rem, transparent 0.11rem),
+    radial-gradient(circle at 31% 45%, rgba(96, 48, 72, 0.1) 0 0.09rem, transparent 0.1rem),
+    radial-gradient(circle at 46% 56%, rgba(96, 48, 72, 0.08) 0 0.13rem, transparent 0.14rem),
+    radial-gradient(circle at 63% 67%, rgba(96, 48, 72, 0.1) 0 0.08rem, transparent 0.1rem),
+    radial-gradient(circle at 82% 48%, rgba(96, 48, 72, 0.08) 0 0.11rem, transparent 0.12rem),
+    linear-gradient(to bottom, rgba(96, 48, 72, 0.12), rgba(96, 48, 72, 0));
+  clip-path: polygon(
+    0 42%,
+    1.5% 45%,
+    3.5% 52%,
+    5.2% 47%,
+    7.5% 55%,
+    9.2% 51%,
+    11.6% 58%,
+    14% 54%,
+    16.4% 60%,
+    18.8% 53%,
+    21.3% 48%,
+    24% 45%,
+    26.4% 43%,
+    29% 40%,
+    31.8% 44%,
+    34.5% 41%,
+    37.2% 46%,
+    40.2% 49%,
+    43% 52%,
+    45.8% 49%,
+    48.3% 55%,
+    50.8% 53%,
+    53.2% 57%,
+    56.3% 55%,
+    59% 60%,
+    61.6% 63%,
+    64.4% 66%,
+    67.5% 63%,
+    70.2% 58%,
+    72.8% 52%,
+    75.5% 48%,
+    78.4% 45%,
+    81.2% 42%,
+    84% 47%,
+    86.2% 55%,
+    88.4% 62%,
+    90.8% 58%,
+    93.2% 65%,
+    95.5% 60%,
+    97.8% 63%,
+    100% 59%,
+    100% 70%,
+    97.8% 71%,
+    95.5% 68%,
+    93.2% 73%,
+    90.8% 66%,
+    88.4% 70%,
+    86.2% 63%,
+    84% 55%,
+    81.2% 50%,
+    78.4% 53%,
+    75.5% 56%,
+    72.8% 60%,
+    70.2% 66%,
+    67.5% 71%,
+    64.4% 74%,
+    61.6% 71%,
+    59% 68%,
+    56.3% 63%,
+    53.2% 65%,
+    50.8% 61%,
+    48.3% 63%,
+    45.8% 57%,
+    43% 60%,
+    40.2% 57%,
+    37.2% 54%,
+    34.5% 49%,
+    31.8% 52%,
+    29% 48%,
+    26.4% 51%,
+    24% 53%,
+    21.3% 56%,
+    18.8% 61%,
+    16.4% 68%,
+    14% 62%,
+    11.6% 66%,
+    9.2% 59%,
+    7.5% 63%,
+    5.2% 55%,
+    3.5% 60%,
+    1.5% 53%,
+    0 50%
+  );
+  filter: blur(0.35px);
+  opacity: 0.62;
+}
+
+.ipp-torn-paper,
+.ipp-torn-paper-top,
+.ipp-final-rip {
+  z-index: 1;
+}
+
+.ipp-torn-paper > *,
+.ipp-torn-paper-top > *,
+.ipp-final-rip > * {
+  position: relative;
+  z-index: 2;
+}
+
+.ipp-torn-paper-top::before {
+  background: var(--ipp-plum);
+}
+
+.ipp-final-rip::before {
+  background: var(--ipp-white);
+}
+
+.ipp-scrap-card {
+  position: relative;
+  isolation: isolate;
+  clip-path: polygon(
+    0 5%,
+    7% 3%,
+    15% 6%,
+    23% 2%,
+    33% 5%,
+    43% 3%,
+    54% 6%,
+    64% 2%,
+    75% 5%,
+    88% 3%,
+    100% 6%,
+    100% 94%,
+    92% 97%,
+    82% 93%,
+    70% 98%,
+    58% 94%,
+    48% 97%,
+    35% 93%,
+    23% 98%,
+    12% 94%,
+    0 97%
+  );
+}
+
+.ipp-scrap-card::after,
+.ipp-note-strip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 48, 72, 0.08) 1px, transparent 1px);
+  background-size: 2.15rem 2.15rem;
+  opacity: 0.34;
+}
+
+.ipp-note-strip {
+  position: relative;
+  clip-path: polygon(
+    0 4%,
+    8% 1%,
+    17% 5%,
+    28% 2%,
+    38% 5%,
+    52% 2%,
+    63% 5%,
+    76% 1%,
+    88% 4%,
+    100% 2%,
+    100% 96%,
+    91% 99%,
+    80% 95%,
+    66% 98%,
+    54% 95%,
+    41% 99%,
+    29% 96%,
+    16% 99%,
+    0 96%
+  );
+}
+
+.ipp-contact-orbit {
+  filter: drop-shadow(0 12px 0 rgba(96, 48, 72, 0.12));
+}
+
+.ipp-ring-text {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: start center;
+  border-radius: 999px;
+}
+
+.ipp-ring-text::before {
+  content: "";
+  position: absolute;
+  inset: 0.4rem;
+  border: 2px dashed currentColor;
+  border-radius: inherit;
+  opacity: 0.35;
+}
+
+.ipp-ink-band {
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255, 200, 74, 0.22), transparent 21rem),
+    radial-gradient(circle at 78% 70%, rgba(120, 168, 120, 0.2), transparent 22rem);
+}
+
+.ipp-route-stack a:nth-child(2n) {
+  transform: translateX(3vw);
+}
+
+.ipp-route-stack a:nth-child(3n) {
+  transform: translateX(-2vw);
+}
+
+@media (max-width: 767px) {
+  .ipp-torn-paper::before,
+  .ipp-torn-paper-top::before,
+  .ipp-final-rip::before {
+    top: -5.25rem;
+    height: 7.2rem;
+  }
+
+  .ipp-route-stack a:nth-child(n) {
+    transform: none;
+  }
 }
 
 .torn-header {

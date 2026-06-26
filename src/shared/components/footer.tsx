@@ -1,8 +1,5 @@
 import Image from "next/image";
-import idpacLogo from "../../public/LOGOROJOIDPAC-p-500.png";
-import logoSymbol from "../../public/logo.png";
-
-const contactEmail = "inglespalapaz@gmail.com";
+import { siteConfig } from "@/shared/config/site";
 
 function MailIcon({ className = "" }: { className?: string }) {
   return (
@@ -53,7 +50,16 @@ function TikTokIcon({ className = "" }: { className?: string }) {
 
 export default function Footer() {
   return (
-    <footer className="paper-texture relative overflow-hidden text-[#321018]">
+    <footer className="paper-texture relative text-[#321018]">
+      <div
+        className="paper-texture pointer-events-none absolute left-0 top-0 h-16 w-full -translate-y-full sm:h-24 lg:h-32"
+        aria-hidden="true"
+        style={{
+          clipPath:
+            "polygon(0 30%, 4% 38%, 8% 25%, 13% 34%, 18% 22%, 24% 31%, 31% 20%, 38% 29%, 45% 18%, 53% 27%, 61% 21%, 69% 32%, 77% 23%, 84% 35%, 91% 26%, 96% 37%, 100% 30%, 100% 100%, 0 100%)",
+        }}
+      />
+
       <div className="mx-auto grid min-h-112 max-w-7xl grid-cols-1 px-6 pt-24 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
         <div className="relative flex min-h-72 flex-col justify-between lg:min-h-92">
           <p className="font-brush max-w-sm text-2xl font-black leading-tight text-[#321018]">
@@ -62,7 +68,7 @@ export default function Footer() {
 
           <div className="pointer-events-none absolute -bottom-10 left-8 h-64 w-64 sm:left-16 sm:h-76 sm:w-76 lg:left-10">
             <Image
-              src={logoSymbol}
+              src={siteConfig.assets.logoSymbol}
               alt=""
               fill
               sizes="19rem"
@@ -74,16 +80,16 @@ export default function Footer() {
         <div className="relative flex min-h-92 flex-col items-start lg:items-end">
           <div className="flex flex-col items-start gap-5 lg:items-end">
             <a
-              href={`mailto:${contactEmail}`}
+              href={`mailto:${siteConfig.contactEmail}`}
               className="font-brush inline-flex items-center gap-3 text-lg font-black text-[#321018] transition hover:text-(--ipp-coral)"
             >
               <MailIcon className="h-4 w-4" />
-              {contactEmail}
+              {siteConfig.contactEmail}
             </a>
 
             <div className="flex items-center gap-4">
               <a
-                href="https://www.instagram.com/"
+                href={siteConfig.socialLinks.instagram}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Abrir Instagram de Ingles Pa' La Paz"
@@ -92,7 +98,7 @@ export default function Footer() {
                 <InstagramIcon className="h-5 w-5" />
               </a>
               <a
-                href="https://www.tiktok.com/"
+                href={siteConfig.socialLinks.tiktok}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Abrir TikTok de Ingles Pa' La Paz"
@@ -103,7 +109,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-auto w-full overflow-hidden pb-6 pt-10 text-right font-sans font-black tracking-[-0.04em] text-[#321018]">
+          <div className="font-display mt-auto w-full overflow-hidden pb-6 pt-10 text-right font-black text-[#321018]">
             <span className="block translate-y-4 leading-[0.8] text-[clamp(5.5rem,12vw,9.4rem)]">
               Inglés
             </span>
@@ -119,7 +125,7 @@ export default function Footer() {
           <p className="font-display text-lg font-black">&copy; 2026 Inglés Pa&apos; la Paz</p>
 
           <Image
-            src={idpacLogo}
+            src={siteConfig.assets.idpacLogo}
             alt="Logo IDPAC y Bogota"
             width={500}
             height={109}
