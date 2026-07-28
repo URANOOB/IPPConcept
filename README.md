@@ -23,7 +23,6 @@ La estructura visual y de navegación ya está disponible. El contenido de las s
 - React y TypeScript
 - Tailwind CSS
 - Framer Motion
-- Playwright para las capturas y comprobaciones visuales
 - pnpm como gestor de paquetes
 
 ## Ejecutarlo localmente
